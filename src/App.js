@@ -1,5 +1,5 @@
 import React from 'react';
-import {Footer,Blog,Possibility,HelpCenter,Header } from './containers';
+import {Footer,Blog,Possibility,HelpCenter,Header,Data } from './containers';
 import {NavBar,Country} from './components';
 import './App.css';
 
@@ -12,7 +12,7 @@ const App = () => {
             </div>
             <Country/>
             <HelpCenter/>
-           
+           <Data/>
             <Possibility/>
             
             <Blog/>

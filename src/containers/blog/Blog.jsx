@@ -9,7 +9,7 @@ export default class Blog extends React.Component {
       };
     
       async componentDidMount() {
-        const url = "https://newsapi.org/v2/everything?q=covid&from=2021-11-26&sortBy=publishedAt&apiKey=a9f9e4f3e6854b39a4cb1067540c9f0e";
+        const url = "https://newsapi.org/v2/everything?q=omicron&from=2021-11-26&sortBy=publishedAt&apiKey=a9f9e4f3e6854b39a4cb1067540c9f0e";
         const response = await fetch(url);
         const data = await response.json();
         this.setState({ artical: data, loading: false });
@@ -45,16 +45,7 @@ export default class Blog extends React.Component {
                 </div>
               </div>
                 )
-        // return (
-        //   <div>
-        //     {/* <div>{this.state.artical.name.title}</div>
-        //     <div>{this.state.artical.name.first}</div>
-        //     <div>{this.state.artical.name.last}</div>
-        //     <img src={this.state.artical.urlToImage.large} /> */}
-        //     <Article imgUrl={this.state.artical.urlToImage} date="Sep 26, 2021" text="GPT-3 and Open  AI is the future. Let us exlore how it is?" />
-        //       {/* <Article imgUrl={this.state.artical.articles.urlToImage} date={this.state.artical} text="GPT-3 and Open  AI is the future. Let us exlore how it is?" /> */}
-        //   </div>
-        // );
+   
       }
     }
 
