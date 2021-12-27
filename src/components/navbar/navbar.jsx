@@ -49,7 +49,7 @@ const Navbar = () => {
           </div>
           <div className="gpt3__navbar-menu_container-links-sign">
           <GetVax/>
-          <button onClick={funGetVac} type="button">Get vaccinated !</button>
+          {/* <button onClick={funGetVac} type="button">Get vaccinated !</button> */}
  
           </div>
         </div>
