@@ -1,6 +1,6 @@
 import React from 'react';
-import {Footer,Blog,Possibility,Features,GPT,Header } from './containers';
-import {NavBar,Cta,Brand} from './components';
+import {Footer,Blog,Possibility,HelpCenter,Header } from './containers';
+import {NavBar,Country} from './components';
 import './App.css';
 
 const App = () => {
@@ -10,11 +10,11 @@ const App = () => {
                 <NavBar/>
                 <Header/>
             </div>
-            <Brand/>
-            <GPT/>
-            <Features/>
+            <Country/>
+            <HelpCenter/>
+           
             <Possibility/>
-            <Cta/>
+            
             <Blog/>
             <Footer/>
           
