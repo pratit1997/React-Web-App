@@ -93,7 +93,7 @@ function CustomTooltip({ active, payload, label }) {
     return (
       <div className="tooltip">
         <h4>{label}</h4>
-        <p>${payload[0].value} cases</p>
+        <p>{payload[0].value} cases</p>
       </div>
     );
   }
