@@ -9,7 +9,7 @@ import {
     CartesianGrid,
   } from "recharts";
   import './Data.css';
-  import { format, parseISO ,subDays} from "date-fns";
+  import { format, parseISO } from "date-fns";
 
   
   const data = [];
