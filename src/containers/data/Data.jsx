@@ -18,14 +18,17 @@ import {
 
 export default class Data extends React.Component {
     
-    
+  state = {
+    covid: null
+  };
+
       async componentDidMount() {
-        const url = "https://api.opencovid.ca/summary?stat=cases&loc=canada&after=01-12-2020";
+        const url = "https://api.opencovid.ca/summary?stat=cases&loc=canada&after=01-01-2021";
         const response = await fetch(url);
         const data2 = await response.json();
         // this.setState({ artical: data, loading: false });
-        
-        for (let num = 0; num <=200; num++) {
+        console.log(Object.keys(data2.summary).length)
+        for (let num = 0; num <Object.keys(data2.summary).length; num++) {
             // console.log(data2.summary[num].date)
             data.push({
               date: data2.summary[num].date,
@@ -33,6 +36,7 @@ export default class Data extends React.Component {
             });
             
         }
+        this.setState({ covid: data});
         // console.log(data);
         
       }
@@ -40,9 +44,9 @@ export default class Data extends React.Component {
       render() {
         
   return (
-     
-    <ResponsiveContainer width="80%" height={400}  >
-    <AreaChart data={data} margin={{
+
+    <ResponsiveContainer width="100%" height={400} id="data" >
+    <AreaChart data={this.state.covid} margin={{
                     top: 5, right: 30, left: 30, bottom: 5,
                 }}>
       <defs>
@@ -75,8 +79,7 @@ export default class Data extends React.Component {
         tickCount={8}
         // tickFormatter={(number) => `${number.toFixed(2)}`}
       />
-
-      <Tooltip />
+<Tooltip content={<CustomTooltip />} />
 
       <CartesianGrid opacity={0.1} vertical={false} />
     </AreaChart>
@@ -89,8 +92,8 @@ function CustomTooltip({ active, payload, label }) {
   if (active) {
     return (
       <div className="tooltip">
-        {/* <h4>{format(parseISO(label), "eeee, d MMM, yyyy")}</h4>
-        <p>${payload[0].value.toFixed(2)} CAD</p> */}
+        <h4>{label}</h4>
+        <p>${payload[0].value} cases</p>
       </div>
     );
   }

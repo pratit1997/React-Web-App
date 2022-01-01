@@ -9,7 +9,7 @@ const Menu=()=>(
     <>
     <p><a href="#cnty">Help Center</a></p>
     <p><a href="#helpCenter">Precautions</a></p>
-          <p><a href="#wgpt3">Data</a></p>
+          <p><a href="#data">Data</a></p>
           <p><a href="#vaccines">Vaccines</a></p>
           <p><a href="#blog">Blog</a></p>
           
@@ -49,7 +49,7 @@ const Navbar = () => {
           </div>
           <div className="gpt3__navbar-menu_container-links-sign">
           <GetVax/>
-          {/* <button onClick={funGetVac} type="button">Get vaccinated !</button> */}
+          
  
           </div>
         </div>

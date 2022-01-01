@@ -19,7 +19,7 @@
     font-weight: 800;
     font-size: 18px;
     line-height: 24px;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.004em;
     color: #fff;
 }
 
@@ -33,14 +33,14 @@
 
 .gpt3__features-container_feature-text {
     flex: 2;
-    max-width: 390px;
+    max-width: 400px;
     display: flex;
 }
 
 .gpt3__features-container_feature-text p {
     font-family: var(--font-family);
     font-weight: 500;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 24px;
     color: var(--color-text);
 }

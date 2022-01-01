@@ -9,9 +9,14 @@ export default class Blog extends React.Component {
       };
     
       async componentDidMount() {
-        const url = "https://newsapi.org/v2/everything?q=omicron&from=2021-11-26&sortBy=publishedAt&apiKey=a9f9e4f3e6854b39a4cb1067540c9f0e";
+        // const url = "https://newsapi.org/v2/everything?q=omicron&from=2021-11-30&sortBy=publishedAt&apiKey=a9f9e4f3e6854b39a4cb1067540c9f0e";
+       const url="http://api.mediastack.com/v1/news?access_key=b2e539219d1ed08190318fafd4954b1c&keywords=covid&countries=ca&%20languages%20=%20en &source=ctv";
         const response = await fetch(url);
         const data = await response.json();
+       
+        
+       
+
         this.setState({ artical: data, loading: false });
         // console.log(this.state.artical.urlToImage)
       }
@@ -32,15 +37,15 @@ export default class Blog extends React.Component {
                 </div>
                 <div className="gpt3__blog-container">
                   <div className="gpt3__blog-container_groupA">
-                      {console.log(this.state.artical.articles[2])}
-                    <Article imgUrl={this.state.artical.articles[0].urlToImage} date={this.state.artical.articles[0].publishedAt} text={this.state.artical.articles[0].content} url={this.state.artical.articles[0].url}/>
+                      {/* {console.log(this.state.artical.articles[2])} */}
+                    <Article imgUrl={this.state.artical.data[0].image} date={this.state.artical.data[0].published_at} text={this.state.artical.data[0].description} url={this.state.artical.data[0].url}/>
                   </div>
                   <div className="gpt3__blog-container_groupB">
                       
-                  <Article imgUrl={this.state.artical.articles[1].urlToImage} date={this.state.artical.articles[1].publishedAt} text={this.state.artical.articles[1].title} url={this.state.artical.articles[1].url}/>
-                   <Article imgUrl={this.state.artical.articles[2].urlToImage} date={this.state.artical.articles[2].publishedAt} text={this.state.artical.articles[2].title} url={this.state.artical.articles[2].url}/>
-                   <Article imgUrl={this.state.artical.articles[3].urlToImage} date={this.state.artical.articles[3].publishedAt} text={this.state.artical.articles[3].title} url={this.state.artical.articles[3].url}/>
-                   <Article imgUrl={this.state.artical.articles[4].urlToImage} date={this.state.artical.articles[4].publishedAt} text={this.state.artical.articles[4].title} url={this.state.artical.articles[4].url}/>
+                   <Article imgUrl={this.state.artical.data[1].image} date={this.state.artical.data[1].published_at} text={this.state.artical.data[1].description} url={this.state.artical.data[1].url}/>
+                    <Article imgUrl={this.state.artical.data[2].image} date={this.state.artical.data[2].published_at} text={this.state.artical.data[2].description} url={this.state.artical.data[2].url}/>
+                     <Article imgUrl={this.state.artical.data[3].image} date={this.state.artical.data[3].published_at} text={this.state.artical.data[3].description} url={this.state.artical.data[3].url}/>
+                      <Article imgUrl={this.state.artical.data[4].image} date={this.state.artical.data[4].published_at} text={this.state.artical.data[4].description} url={this.state.artical.data[4].url}/>
                   </div>
                 </div>
               </div>

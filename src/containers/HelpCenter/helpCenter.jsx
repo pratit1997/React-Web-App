@@ -20,10 +20,8 @@ You can be infected by breathing in the virus if you are near someone who has CO
       
       
       <Feature title="Stay 6 feet away from others" text="Maintain a safe distance from others (at least 1 metre), even if they don’t appear to be sick." />
-
-      <Feature title="Stay 6 feet away from others" text="Maintain a safe distance from others (at least 1 metre), even if they don’t appear to be sick." />
-
-      <Feature title="Stay 6 feet away from others" text="Maintain a safe distance from others (at least 1 metre), even if they don’t appear to be sick." />
+      <Feature title="Avoid Crowded Areas" text="Being in crowds like in restaurants, bars, fitness centers, or movie theaters put you at higher risk for COVID-19" />
+      <Feature title="Avoid Travel" text="Avoid Non-Essential Travel , your trips can wait" /> 
     </div>
   </div>
         </div>
