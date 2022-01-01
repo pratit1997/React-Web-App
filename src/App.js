@@ -15,7 +15,7 @@ const App = () => {
            <Data/>
             <Possibility/>
             
-            <Blog/>
+            {/* <Blog/> */}
             <Footer/>
           
         </div>
